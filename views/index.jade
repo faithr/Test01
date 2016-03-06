@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    div(ng-controller="TestCtrl as tc")
+
+        body
+            header Header
+            .container
+                article.box1
+                    | Article contents
+                    br
+                    | ( Box 1 )
+                nav.box2
+                    | Navbar contents
+                    br
+                    | ( Box 2 )
+                aside.box3
+                    | Sidebar contents
+                    br
+                    | ( Box 3 )
+            footer Footer
+        //
+        //h1 {{tc.title}}
+        //p Welcome to {{tc.subtitle}}
+        //h2 {{tc.text.title}}
+        //p {{tc.text.address}}
+        //p
+        //  strong
+        //    em {{tc.text.state}}
+        //#container(layout="row")
+        //    #box1(layout="column")
+        //       #box2(layout="column")
+        //           #box3(layout="column")
+            //#container.logo
+            //#container.drop-down
+            //#top-nav(flex)
+            //#content(layout="row" flex)
+            //    #left-side-bar(flex)
+            //    #list(layout="column" flex)
+
+
+
