@@ -9,11 +9,28 @@ function testCtrl() {
 
     vm.title = "Faith Test App";
     vm.subtitle = "You gotta have Faith";
-    vm.text = {
-"title": "faith",
-        "address": "28 crescent road",
-        "state": "nj"
-    }
+    vm.text = [
+        {
+            "title": "faith",
+            "address": "28 crescent road",
+            "state": "nj"
+        },
+        {
+            "title": "david",
+            "address": "28 crescent road",
+            "state": "nj"
+        }
+        ,
+        {
+            "title": "rachel",
+            "address": "28 crescent road",
+            "state": "nj"
+        }
+        , {
+            "title": "faith",
+            "address": "28 crescent road",
+            "state": "nj"
+        }];
 
 
 }

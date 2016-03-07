@@ -4,20 +4,32 @@ block content
     div(ng-controller="TestCtrl as tc")
 
         body
-            header Header
-            .container
-                article.box1
+
+            .container(layout="row")
+                article.box1(flex)
                     | Article contents
                     br
                     | ( Box 1 )
-                nav.box2
+                nav.box2(flex)
                     | Navbar contents
                     br
                     | ( Box 2 )
-                aside.box3
+                aside.box3(flex)
                     | Sidebar contents
                     br
                     | ( Box 3 )
+            #content(layout="row" layout-align="space-between center"
+
+            )
+                #sidebar(flex="30")
+                    p fred
+                    md-divider
+                    p ethel
+                    md-divider
+                    p lucy
+                    md-divider
+                    p ricky
+                include list
             footer Footer
         //
         //h1 {{tc.title}}
