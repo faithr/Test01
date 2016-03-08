@@ -15,11 +15,14 @@ block content
                     br
                     | ( Box 2 )
                 aside.box3(flex)
-                    md-content.autoScroll
-                        md-input-container.md-icon-float.md-block
+                        md-input-container.md-icon-float.md-block.padding
                             label Bridgewater, NJ
-                           md-icon search
-                            input(ng-model='user.name', type='text')
+                            md-icon location
+                            input(ng-model='user.city', type='text')
+                        md-input-container.md-icon-float.md-block
+                                label Enter search keyword
+                                md-icon search
+                                input(ng-model='user.search', type='text')
 
 
 
@@ -27,15 +30,21 @@ block content
 
             )
                 #sidebar(flex="30")
-                    p fred
+                    p Filter
                     md-divider
-                    p ethel
+                    p List
                     md-divider
-                    p lucy
+                    p Map
                     md-divider
-                    p ricky
+                    p Detail
+                    md-divider
+                    p Favorites
+                    md-divider
+                    p Tell Us About a New Activity
+                    md-divider
+                    p Edit your Profile
                 include list
-            footer Footer
+            //footer Footer
         //
         //h1 {{tc.title}}
         //p Welcome to {{tc.subtitle}}
