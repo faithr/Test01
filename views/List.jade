@@ -1,8 +1,7 @@
 //   Created by froth on 3/6/2016.
 #list(flex)
     div(ng-repeat="it in tc.text")
-        .listitem(layout="row", layout-align="space-between center", flex,)
-            .lvl1
+        .listitem(layout="row", layout-align="space-between center", flex)
             md-icon perm_identity
             .title(flex="30") {{it.title}}
             .address(flex="30") {{it.address}}
@@ -11,4 +10,4 @@
     p.md-body-1
         | When in the
         | course of human
-        | events it becomes0
+        | events it becomes
