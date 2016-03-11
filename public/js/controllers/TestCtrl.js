@@ -7,29 +7,32 @@ angular.module("MyApp")
 function testCtrl() {
     var vm = this;
 
-    vm.title = "Faith Test App";
     vm.subtitle = "You gotta have Faith";
     vm.text = [
         {
-            "title": "faith",
-            "address": "28 crescent road",
-            "state": "nj"
+            "category": "Tennis",
+            "title": "Green Knoll Tennis Center ",
+            "address": "Bridgewater, NJ",
+            "miles": ".5 miles"
         },
         {
-            "title": "david",
-            "address": "28 crescent road",
-            "state": "nj"
+            "category": "Martial Arts",
+            "title": "Bridgewater Martial Arts ",
+            "address": "Bridgewater, NJ",
+            "miles": "1.2 miles"
         }
         ,
         {
-            "title": "rachel",
-            "address": "28 crescent road",
-            "state": "nj"
+            "category": "Voice",
+            "title": "School of Rock",
+            "address": "Somerville, NJ",
+            "miles": "2.1 miles"
         }
         , {
-            "title": "faith",
-            "address": "28 crescent road",
-            "state": "nj"
+            "category": "Photography",
+            "title": "NJ School of Photography",
+            "address": "Somerville, NJ",
+            "miles": "7.4 miles"
         }];
 
 

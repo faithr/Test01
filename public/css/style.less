@@ -4,7 +4,7 @@
 //}
 body {
   padding: 2em;
-  background-color: #6D899F;
+  background-color: #;
 }
 
 header, footer {
@@ -22,7 +22,7 @@ header, footer {
   width: 100%;
 }
 
-.fb-layout(@padding:0, @margin:0, @width:100%){
+.fb-layout(@padding:0, @margin:0, @width:100%) {
   padding: @padding;
   margin: @margin;
   width: @width;
@@ -43,19 +43,21 @@ header, footer {
     .fb-layout(10px, 5px 20px 100px 0px);
     //pad ding:10px;
     //margin:10px;
-    .listitem{
-      .fb-layout(5px, 5px,100%);
+    .listitem {
+      .fb-layout(5px, 5px, 100%);
       background: lightgrey;
-      .lvl1{
-        .fb-layout(0,0,40px);
+      .lvl1 {
+        .fb-layout(0, 0, 40px);
         background: green;
         height: 24px;
       }
-      .title{
+      .title {
         font-weight: bold;
       }
-      .address{}
-      .state{}
+      .address {
+      }
+      .state {
+      }
 
     }
   }
@@ -70,8 +72,7 @@ header, footer {
   background-color: white;
 }
 
-
-md-block.padding{
+md-block.padding {
   padding-bottom: 0px;
 }
 
@@ -135,17 +136,17 @@ md-block.padding{
   //}
 }
 
-#container{
+#container {
   height: 180px;
 }
 
-.md-input-container{
-  margin:0 !important;
+.md-input-container {
+  margin: 0 !important;
 }
 
 #content #list .listitem {
-  background: white}
-
+  background: white
+}
 
 #content #sidebar {
   background: white;
@@ -155,11 +156,11 @@ md-block.padding{
   background: white;
 }
 
-#content #list{
-background: white;
+#content #list {
+  background: white;
 }
 
-p{
+p {
   color: Black;
 }
 
@@ -167,12 +168,63 @@ p.md-title {
   font-size: 12px;
 }
 
-.md-button.md-raised.left{
-  margin-top:30px;
+.md-button.md-raised.left {
+  padding: 0 10px 0 10px;
+  margin: 0px 0px 100px 24px;
+  min-width: 60px;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.md-button.md-raised.mid {
+  padding: 0 1px 0 1px;
+  margin: 6px 20px 6px 6px;
+  min-width: 60px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight:;
+}
+
+md-sidenav.md-sidenav-left {
+  font-size: 12px;
+}
+
+.menudemoMenuWidth .md-menu-demo {
+  padding: 24px;
+}
+
+.menudemoMenuWidth .menu-demo-container {
+  min-height: 200px;
+}
+
+#content #list .listitem .lvl1 {
+  color: #fff;
+  background-color: #2a74be;
+  text-align: center;
+  height: 60px;
+  width: 25px;
+  padding-top: 18px;}
+
+
+/*List styles*/
+#content #list .listitem .category{
+  font-size:13px;
 }
 
 
-.menudemoMenuWidth .md-menu-demo {
-  padding: 24px; }
-.menudemoMenuWidth .menu-demo-container {
-  min-height: 200px; }
+#content #list .listitem .address{
+  font-size:14px;
+}
+
+
+#content #list .listitem .miles{
+  font-size:13px;
+}
+
+#content #list .listitem .color1 {
+  color: #2a74be;
+  margin-left: 5px;
+  font-size: 22px;
+}

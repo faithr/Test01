@@ -7,15 +7,16 @@ block content
 
             #container(layout="row")
                 article.box1(flex)
-                    | <img src="images/stretchkids-logo.jpg" alt="logo" height="46" width="200">
+                    | <img src="images/stretchkids-logo.jpg" alt="logo" height="56" width="228">
                     section(layout='row', layout-xs='column', layout-align='left left', layout-wrap)
                         md-button.md-raised.left(ng-click="close()") Sign In
                         md-button.md-raised.left(ng-click="close()") Register
                 nav.box2(flex)
                     section(layout='row', layout-xs='column', layout-align='left left', layout-wrap)
-                            md-button.md-raised(ng-click="$mdOpenMenu($event)") FILTER
-                            md-button.md-raised(ng-click="$mdOpenMenu($event)") MAP
-                            md-button.md-raised(ng-click="$mdOpenMenu($event)") SORT
+                            md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") FILTER
+
+                            md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") MAP
+                            md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") SORT
 
 
                 aside.box3(flex)
@@ -31,11 +32,8 @@ block content
 
 
             #content(layout="row" layout-align="space-between center")
-                md-sidenav.md-sidenav-left.md-whiteframe-z2(layout="column", flex="30",md-component-id='left', md-is-locked-open="$mdMedia('gt-sm')")
+                md-sidenav.md-sidenav-left.md-whiteframe-17dp(layout="column", flex="30",md-component-id='left', md-is-locked-open="$mdMedia('gt-sm')")
                     md-content
-                        //section(layout='row', layout-xs='column', layout-align='center center', layout-wrap)
-                        //    md-button.md-raised(ng-click="close()") Sign In
-                        //    md-button.md-raised(ng-click="close()") Register
 
                     md-list
                         md-list-item(ng-click="mc.close()", ui-sref="filter") Filter
@@ -53,39 +51,9 @@ block content
                         md-divider
                         md-list-item(ng-click="mc.close()",ui-sref="page3") Edit Your Profile
                         md-divider
-                    //p Filter
-                    //md-divider
-                    //p List
-                    //md-divider
-                    //p Map
-                    //md-divider
-                    //p Detail
-                    //md-divider
-                    //p Favorites
-                    //md-divider
-                    //p Tell Us About a New Activity
-                    //md-divider
-                    //p Edit your Profile
+
                 include list
-            //footer Footer
-        //
-        //h1 {{tc.title}}
-        //p Welcome to {{tc.subtitle}}
-        //h2 {{tc.text.title}}
-        //p {{tc.text.address}}
-        //p
-        //  strong
-        //    em {{tc.text.state}}
-        //#container(layout="row")
-        //    #box1(layout="column")
-        //       #box2(layout="column")
-        //           #box3(layout="column")
-            //#container.logo
-            //#container.drop-down
-            //#top-nav(flex)
-            //#content(layout="row" flex)
-            //    #left-side-bar(flex)
-            //    #list(layout="column" flex)
+
 
 
 
