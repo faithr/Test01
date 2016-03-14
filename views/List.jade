@@ -2,12 +2,13 @@
 #list(flex)
     div(ng-repeat="it in tc.text")
         .listitem(layout="row", layout-align="space-between center", flex)
+            md-icon.lvl1 perm_identity
             md-icon perm_identity
-            .title(flex="30") {{it.title}}
-            .address(flex="30") {{it.address}}
-            .state(flex="15") {{it.state}}
+            .category(flex="15") {{it.category}}
+            .title(flex="45") {{it.title}}
+            .address(flex="20") {{it.address}}
+            .miles(flex="19") {{it.miles}}
+                md-icon.color1 home
         md-divider
     p.md-body-1
-        | When in the
-        | course of human
-        | events it becomes
+
