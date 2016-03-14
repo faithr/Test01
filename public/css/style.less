@@ -2,9 +2,13 @@
 //  margin: 0;
 //  padding: 0;
 //}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,100,100italic,300,300italic,400italic,500,500italic);
 body {
   padding: 2em;
+  font-family: 'Roboto', sans serif;
 }
+
 
 header, footer {
   background-color: #FFFFFF;
@@ -12,11 +16,6 @@ header, footer {
 }
 
 .container {
-  //display: -webkit-box;
-  //display: -moz-box;
-  //display: -ms-flexbox;
-  //display: -webkit-flex;
-  //display: flex;
   width: 100%;
 }
 
@@ -29,6 +28,7 @@ header, footer {
 #content {
   background: lightgrey;
   //padding: 10px;
+
   #sidebar {
     background: lightgreen;
     .fb-layout(10px, 10px, 300px);
@@ -66,8 +66,9 @@ header, footer {
 }
 
 .box2 {
-
   background-color: white;
+  margin-top: 40px;
+  font-weight: 900;
 }
 
 md-block.padding {
@@ -75,18 +76,7 @@ md-block.padding {
 }
 
 .box3 {
-  //-webkit-box-ordinal-group: 3;
-  //-moz-box-ordinal-group: 3;
-  //-ms-flex-order: 3;
-  //-webkit-order: 3;
-  //order: 3;
-  //
-  //-webkit-box-flex: 1;
-  //-moz-box-flex: 1;
-  //-webkit-flex: 1;
-  //-ms-flex: 1;
   flex: 1;
-
   background-color: white;
 }
 
@@ -97,7 +87,6 @@ md-block.padding {
 /* mobile layout */
 @media (max-width: 480px) {
   .container {
-
     width: 100%;
 
   }
@@ -136,29 +125,42 @@ p.md-title {
 }
 
 .md-button.md-raised.left {
-  padding: 0 10px 0 10px;
-  margin: 0px 0px 80px 24px;
-  min-width: 60px;
+  padding: 0 5px 0 5px;
+  margin: 0px 0px 0px 24px;
   border-radius: 3px;
-  font-size: 16px;
-  width: 100px;
+  font-size: 13px;
+  width: 70px;
   height:30px;
-  margin-top: 30px;
+  margin-top: 40px;
   font-weight: 600;
 }
 
 .md-button.md-raised.mid {
-  padding: 0 1px 0 1px;
   margin: 6px 20px 6px 6px;
-  min-width: 60px;
-  border-radius: 3px;
-  font-size: 11px;
-  font-weight:;
+  border-radius: 0px;
+  font-size: 12px;
+  font-weight:900;
+  width: 80px;
 }
 
+/*Sidebar*/
+
 md-sidenav.md-sidenav-left {
-  font-size: 12px;
+  font-size: 14px;
+  margin-right:20px;
+  height: 470px;
+  margin-top: 26px;
+
 }
+
+.md-list-item{
+  font-weight: bold;
+}
+
+.md-button{
+  font-weight: 700;
+}
+
 
 .menudemoMenuWidth .md-menu-demo {
   padding: 24px;
@@ -172,21 +174,30 @@ md-sidenav.md-sidenav-left {
   color: #fff;
   background-color: #2a74be;
   text-align: center;
-  height: 60px;
-  width: 25px;
-  padding-top: 18px;}
+  height: 100px;
+  width: 30px;
+  padding-top: 40px;}
 
 
-/*List styles*/
-#content #list .listitem .category{
-  font-size:13px;
+/*Category List styles*/
+
+#list{
+  width: 700px;
+  height: 500px;
 }
 
+#content #list .listitem .category{
+  font-size:15px;
+  font-weight: 700;
+}
+
+#content #list .listitem .title{
+  font-size:18px;
+}
 
 #content #list .listitem .address{
-  font-size:14px;
+  font-size:18px;
 }
-
 
 #content #list .listitem .miles{
   font-size:13px;
@@ -194,6 +205,5 @@ md-sidenav.md-sidenav-left {
 
 #content #list .listitem .color1 {
   color: #2a74be;
-  margin-left: 5px;
   font-size: 22px;
 }

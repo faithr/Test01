@@ -7,14 +7,13 @@ block content
 
             #container(layout="row")
                 article.box1(flex)
-                    | <img src="images/stretchkids-logo.jpg" alt="logo" height="72" width="369">
+                    | <img src="images/stretchkids-logo.jpg" alt="logo" height="72" width="300">
                     section(layout='row', layout-xs='column', layout-align='left left', layout-wrap)
                         md-button.md-raised.left(ng-click="close()") Sign In
                         md-button.md-raised.left(ng-click="close()") Register
                 nav.box2(flex)
-                    section(layout='row', layout-xs='column', layout-align='left left', layout-wrap)
+                    section(layout='row', layout-xs='column', layout-align='center center', layout-wrap)
                             md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") FILTER
-
                             md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") MAP
                             md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") SORT
 
@@ -31,10 +30,9 @@ block content
 
 
 
-            #content(layout="row" layout-align="space-between center")
+            #content(layout="row" layout-align="")
                 md-sidenav.md-sidenav-left.md-whiteframe-17dp(layout="column", flex="30",md-component-id='left', md-is-locked-open="$mdMedia('gt-sm')")
                     md-content
-
                     md-list
                         md-list-item(ng-click="mc.close()", ui-sref="filter") Filter
                         md-divider
