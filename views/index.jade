@@ -1,56 +1,33 @@
-extends layout
+doctype html
+html
+    head
+        title= title
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        // bower:css
+        link(rel='stylesheet', href='lib/angular-material/angular-material.css')
+        link(rel='stylesheet', href='lib/material-design-lite/material.min.css')
+        // endbower
 
-block content
-    div(ng-controller="TestCtrl as tc")
+        link(rel='stylesheet', href='/css/style.css')
 
-        body
-
-            #container(layout="row")
-                article.box1(flex)
-                    | <img src="images/stretchkids-logo.jpg" alt="logo" height="72" width="300">
-                    section(layout='row', layout-xs='column', layout-align='left left', layout-wrap)
-                        md-button.md-raised.left(ng-click="close()") Sign In
-                        md-button.md-raised.left(ng-click="close()") Register
-                nav.box2(flex)
-                    section(layout='row', layout-xs='column', layout-align='center center', layout-wrap)
-                            md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") FILTER
-                            md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") MAP
-                            md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") SORT
-
-
-                aside.box3(flex)
-                        md-input-container.md-icon-float.md-block.padding
-                            label Bridgewater, NJ
-                            md-icon location
-                            input(ng-model='user.city', type='text')
-                        md-input-container.md-icon-float.md-block
-                                label Enter search keyword
-                                md-icon search
-                                input(ng-model='user.search', type='text')
-
-
+    body(ng-app="MyApp" ng-cloak)
+        div(ng-controller="TestCtrl as tc" layout="column")
+            include topnav
 
             #content(layout="row" layout-align="")
-                md-sidenav.md-sidenav-left.md-whiteframe-17dp(layout="column", flex="25",md-component-id='left', md-is-locked-open="$mdMedia('gt-sm')")
-                    md-content
-                    md-list
-                        md-list-item(ng-click="mc.close()", ui-sref="filter") Filter
-                        md-divider
-                        md-list-item(ng-click="mc.close()", ui-sref="list") List
-                        md-divider
-                        md-list-item(ng-click="mc.close()", ui-sref="map") Map
-                        md-divider
-                        md-list-item(ng-click="mc.close()", ui-sref="detail") Detail
-                        md-divider
-                        md-list-item(ng-click="mc.close()", ui-sref="home") Favorites
-                        md-divider
-                        md-list-item(ng-click="mc.close()", ui-sref="page3") Tell Us About
-                            | a New Activity
-                        md-divider
-                        md-list-item(ng-click="mc.close()",ui-sref="page3") Edit Your Profile
-                        md-divider
-
+                include sidenav
                 include list
+        // bower:js
+        script(src='lib/angular/angular.js')
+        script(src='lib/angular-ui-router/release/angular-ui-router.js')
+        script(src='lib/angular-animate/angular-animate.js')
+        script(src='lib/angular-aria/angular-aria.js')
+        script(src='lib/angular-messages/angular-messages.js')
+        script(src='lib/angular-material/angular-material.js')
+        script(src='lib/material-design-lite/material.min.js')
+        // endbower
+        script(src="/js/main.js")
+        script(src="/js/controllers/TestCtrl.js")
 
 
 
