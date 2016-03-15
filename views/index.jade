@@ -12,11 +12,13 @@ html
 
     body(ng-app="MyApp" ng-cloak)
         div(ng-controller="TestCtrl as tc" layout="column")
-            include topnav
+            div(ui-view="topnav")
+                h1 Loading...
+                md-progress-circular(md-mode="indeterminate")
 
             #content(layout="row" layout-align="")
-                include sidenav
-                include list
+                div(ui-view="sidenav")
+                div(ui-view="list")
         // bower:js
         script(src='lib/angular/angular.js')
         script(src='lib/angular-ui-router/release/angular-ui-router.js')

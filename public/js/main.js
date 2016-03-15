@@ -3,4 +3,15 @@
  */
 
 angular
-    .module('MyApp',['ngMaterial', 'ngMessages', 'ui.router']);
+    .module('MyApp', ['ngMaterial', 'ngMessages', 'ui.router'])
+    .config(function ($stateProvider) {
+        $stateProvider
+            .state('index', {
+                url: "",
+                views: {
+                    "topnav": {templateUrl: "/states/topnav"},
+                    "sidenav": {templateUrl: "/states/sidenav"},
+                    "list": {templateUrl: "/states/list"}
+                }
+            });
+    });

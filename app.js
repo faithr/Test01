@@ -23,6 +23,11 @@ app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/states/*',function(req,res){
+  varfilename=req.params['0'];
+//if(!filename)return;//mightwanttochangethis
+  res.render("states/"+filename);
+});
 app.use('/', routes);
 app.use('/users', users);
 
