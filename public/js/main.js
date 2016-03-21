@@ -9,7 +9,9 @@ angular
             .state('index', {
                 url: "",
                 views: {
-                    "topnav": {templateUrl: "/states/topnav"},
+                    "topnav": {
+                        templateUrl: "/states/topnav"
+                    },
                     "sidenav": {templateUrl: "/states/sidenav"},
                     "list": {templateUrl: "/states/list"}
                 }

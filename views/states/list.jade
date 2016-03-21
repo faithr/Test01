@@ -1,13 +1,13 @@
 //   Created by froth on 3/6/2016.
 #list(flex)
     div(ng-repeat="it in tc.text")
-        .listitem(layout="row", layout-align="space-between center", flex)
+        .listitem(layout="row", layout-align="center center")
             md-icon.lvl1 perm_identity
-            | <img src="images\noun_122832_cc-test.svg" alt="tennis" height="130" width="60" hspace="9">
-            .category(flex="15") {{it.category}}
-            .title(flex="28") {{it.title}}
-            .address(flex="20") {{it.address}}
-            .miles(flex="19") {{it.miles}}
+            | <img src="img\noun_122832_cc-test.svg" alt="tennis" height="130" width="60" hspace="9">
+            .category {{it.category}}
+            .title {{it.title}}
+            .address {{it.address}}
+            .miles {{it.miles}}
                 md-icon.color1 home
         md-divider
     p.md-body-1

@@ -18,11 +18,6 @@ header, footer {
   width: 100%;
 }
 
-.fb-layout(@padding:0, @margin:0, @width:100%) {
-  padding: @padding;
-  margin: @margin;
-  width: @width;
-}
 
 #content {
   background: lightgrey;
@@ -31,7 +26,6 @@ header, footer {
   //  background: lightgreen;
   //  .fb-layout(10px, 10px, 300px);
   //}
-
 
   /*List Right*/
   #list {
@@ -80,45 +74,24 @@ header, footer {
     }
   }
 }
+
 /*top label*/
 label.town {
-color: #000;
+  color: #000;
 }
-aside.box3{
+
+aside.box3 {
   flex-shrink: 1;
   flex-grow: 1;
   flex-basis: 60px;
   margin-right: 40px;
 }
 
-//md-input-container.md-icon-float.md-block.padding{
-//
-//}
-.box2 {
-  background-color: white;
-  margin-top: 40px;
-  font-weight: 900;
-}
 
-.box3 {
-  flex: 1;
-  background-color: white;
-}
 
-.box1, .box2, .box3 {
-  padding: 1em;
-}
-
-/* mobile layout */
-@media (max-width: 480px) {
-  .container {
-    width: 100%;
-
-  }
-}
 
 #container {
-  height: 180px;
+  height: 130px;
 }
 
 .md-input-container {
@@ -142,34 +115,42 @@ aside.box3{
 }
 
 p {
-  color: Black;
+  color: #000;
 }
 
 p.md-title {
   font-size: 12px;
 }
 
+/*buttons*/
+
 .md-button.md-raised.left {
-  padding: 0 5px 0 5px;
-  margin: 0px 0px 0px 24px;
-  border-radius: 125px;
-  font-size: 13px;
-  width: 140px;
-  height: 60px;
-  margin-top: 40px;
+  //padding: 0 5px 0 5px;
+  //margin: 0px 0px 0px 0px;
+  //border-radius: 5px;
+  font-size: 14px;
+  width: 40px;
+  height: 40px;
   font-weight: 600;
-  border: 1px solid #2a74be;
-  color: #2a74be;
+  color: #000;
+  background-color: #ecebeb;
 }
 
-.md-button.md-raised.mid {
+
+md-button.md-raised.mid{
   margin: 6px 20px 6px 6px;
   border-radius: 0px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 900;
   align-self: center;
+
+
   //width: 80px;
 }
+.md-button.md-raised:not([disabled]) {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+}
+
 
 /*Sidebar*/
 
@@ -200,6 +181,8 @@ md-input-container {
   min-height: 200px;
 }
 
+/*Icon (color background) styles*/
+
 #content #list .listitem .lvl1 {
   color: #fff;
   background-color: #2a74be;
@@ -208,6 +191,8 @@ md-input-container {
   width: 30px;
   padding-top: 40px;
 }
+
+
 
 /*Category List styles*/
 
@@ -236,3 +221,7 @@ md-input-container {
   color: #2a74be;
   font-size: 22px;
 }
+
+/*Child styles*/
+
+

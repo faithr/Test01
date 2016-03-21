@@ -23,14 +23,26 @@ app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/states/*',function(req,res){
-  varfilename=req.params['0'];
-//if(!filename)return;//mightwanttochangethis
-  res.render("states/"+filename);
-});
 app.use('/', routes);
-app.use('/users', users);
-
+//app.use('/users', users);
+//var db = require('./routes/database');
+//app.get("/SKD", db.getActivities);
+//app.get("/SKA", db.getAllActivities);
+//app.get("/SKC", db.getCategories);
+//app.get("/SKCD", db.getCategoriesDict);
+//app.post('/SKPP',  db.providerProfile);
+app.use('/states/*',  function(req, res){
+  var filename = req.params['0'];
+  //if(!filename) return;  // might want to change this
+  res.render( "states/"+filename );
+});
+app.use('/partials/*',  function(req, res){
+  var filename = req.params['0'];
+  //if(!filename) return;  // might want to change this
+  console.log(filename);
+  res.render( "partials/"+filename );
+});
+app.use('/*',routes);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
