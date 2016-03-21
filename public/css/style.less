@@ -2,13 +2,12 @@
 //  margin: 0;
 //  padding: 0;
 //}
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,100,100italic,300,300italic,400italic,500,500italic);
+
 body {
   padding: 2em;
   font-family: 'Roboto', sans serif;
 }
-
 
 header, footer {
   background-color: #FFFFFF;
@@ -27,50 +26,79 @@ header, footer {
 
 #content {
   background: lightgrey;
-  //padding: 10px;
 
-  #sidebar {
-    background: lightgreen;
-    .fb-layout(10px, 10px, 300px);
-    //width: 300px;
-    //padding:10px;
-    //margin:10px;
-  }
+  //#sidebar {
+  //  background: lightgreen;
+  //  .fb-layout(10px, 10px, 300px);
+  //}
+
+
+  /*List Right*/
   #list {
     background: lightblue;
-    .fb-layout(10px, 5px 20px 100px 0px);
-    //pad ding:10px;
-    //margin:10px;
+    width: 800px;
     .listitem {
-      .fb-layout(5px, 5px, 100%);
-      background: lightgrey;
+      height: 110px;
+    }
+
+    .category {
+      flex-shrink: 1;
+      flex-grow: 1;
+      flex-basis: 60px;
+    }
+    .title {
+      flex-shrink: 1;
+      flex-grow: 1;
+      flex-basis: 1;
+      font-weight: bold;
+      flex-basis: 200px;
+    }
+
+    .address {
+      flex-shrink: 1;
+      flex-grow: 2;
+      flex-basis: 60px;
+    }
+    .miles {
+      flex-shrink: 1;
+      flex-grow: 2;
+      flex-basis: 40px;
+      font-weight: bold;
+    }
+
+    .listitem {
       .lvl1 {
-        .fb-layout(0, 0, 40px);
-        background: green;
         height: 24px;
       }
-      .title {
-        font-weight: bold;
-      }
-      .address {
-      }
-      .state {
+      md-icon.color1 {
+        height: 24px;
+        flex-shrink: 1;
+        flex-grow: 2;
+        flex-basis: 40px;
       }
 
     }
   }
 }
-
-.box1 {
-  background-color: white;
+/*top label*/
+label.town {
+color: #000;
+}
+aside.box3{
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 60px;
+  margin-right: 40px;
 }
 
+//md-input-container.md-icon-float.md-block.padding{
+//
+//}
 .box2 {
   background-color: white;
   margin-top: 40px;
   font-weight: 900;
 }
-
 
 .box3 {
   flex: 1;
@@ -127,7 +155,7 @@ p.md-title {
   border-radius: 125px;
   font-size: 13px;
   width: 140px;
-  height:60px;
+  height: 60px;
   margin-top: 40px;
   font-weight: 600;
   border: 1px solid #2a74be;
@@ -138,32 +166,29 @@ p.md-title {
   margin: 6px 20px 6px 6px;
   border-radius: 0px;
   font-size: 12px;
-  font-weight:900;
-  width: 80px;
+  font-weight: 900;
+  align-self: center;
+  //width: 80px;
 }
 
 /*Sidebar*/
 
-
 md-sidenav.md-sidenav-left {
   font-size: 14px;
-  margin-right:20px;
+  margin-right: 20px;
   height: 470px;
   margin-top: 26px;
-  width: 30%;
-
 }
 
-.md-list-item{
+.md-list-item {
   font-weight: bold;
 }
 
-.md-button{
+.md-button {
   font-weight: 700;
 }
 
-
-md-input-container{
+md-input-container {
   margin: auto 0;
 }
 
@@ -181,30 +206,30 @@ md-input-container{
   text-align: center;
   height: 100px;
   width: 30px;
-  padding-top: 40px;}
-
+  padding-top: 40px;
+}
 
 /*Category List styles*/
 
-#list{
+#list {
   margin: auto 0;
 }
 
-#content #list .listitem .category{
-  font-size:15px;
+#content #list .listitem .category {
+  font-size: 15px;
   font-weight: 700;
 }
 
-#content #list .listitem .title{
-  font-size:18px;
+#content #list .listitem .title {
+  font-size: 18px;
 }
 
-#content #list .listitem .address{
-  font-size:18px;
+#content #list .listitem .address {
+  font-size: 18px;
 }
 
-#content #list .listitem .miles{
-  font-size:13px;
+#content #list .listitem .miles {
+  font-size: 13px;
 }
 
 #content #list .listitem .color1 {
