@@ -1,6 +1,6 @@
 //    Created by froth on 3/15/2016
 
-#container(layout="row", ng-controller="TopNavCtrl as tc")
+#container(layout="row",  ng-controller="TopNavCtrl as tc")
     article.box1(flex)
         md-button.md-icon-button(ng-click="tc.toggleSidenav('left')", hide-gt-sm='', aria-label="Settings")
             md-icon(aria-label='Menu', md-svg-icon='/img/Hamburger.svg')
@@ -9,7 +9,7 @@
             //md-button.md-raised.left(ng-click="close()") Sign In
             //md-button.md-raised.left(ng-click="close()") Register
     nav.box2(flex)
-        section(layout='row', layout-xs='column', layout-align='center center', layout-wrap)
+        section(layout='row', layout-xs='column', hide-xs, layout-align='center center', layout-wrap)
             md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") FILTER
             md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") MAP
             md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") SORT
