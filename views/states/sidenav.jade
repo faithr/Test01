@@ -1,6 +1,6 @@
 //   Created by froth on 3/15/2016.
 
-section(layout='row', layout-xs='column', hide-xs layout-align='center center', layout-wrap)
+section(layout='row', layout-xs='column',  hide-xs,  hide-gt-xs, show-gt-sm layout-align='center center', layout-wrap)
     md-button.md-raised.left(ng-click="close()") Sign In
     md-button.md-raised.left(ng-click="close()") Register
 
@@ -9,7 +9,6 @@ md-sidenav.md-sidenav-left.md-whiteframe-17dp(layout="column",
 flex="90",
 md-component-id='left',
 md-is-locked-open="$mdMedia('gt-sm')")
-
     md-content
     md-list
         md-list-item(ng-click="mc.close()", ui-sref="filter") Filter
