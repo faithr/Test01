@@ -4,15 +4,9 @@
         ng-controller="TopNavCtrl as tc")
     div.box1(layout="row")
         md-button.md-icon-button(ng-click="tc.toggleSidenav('left')", hide-gt-sm='', aria-label="Settings")
-            md-icon(aria-label='Menu', md-svg-icon='/img/Hamburger.svg' height="72" width="72")
+            md-icon(aria-label='Menu', md-svg-icon='/img/Hamburger.svg' )
         img(src="img/stretchkids-logo.jpg" alt="logo" height="72" width="300")
-        //img(hide-sm, src="img/stretchkids-logo.jpg" alt="logo" height="72" width="300")  //small logo
-        //img(hide-gt-sm, src="img/stretchkids-logo.jpg" alt="logo" height="40" width="200")
 
-
-
-        //md-button.md-raised.mid.left(ng-click="close()" ) Sign In
-        //md-button.md-raised.mid.left(ng-click="close()") Register
 
 
     nav.box2(flex)
@@ -23,9 +17,6 @@
 
     .mid(layout='row')
         section(hide-gt-sm='', flex='', layout='column')
-            //md-button.btn1(ng-click="close()") Sign In/Register
-            //md-button.btn1(ng-click="close()") Sort/Filter
-            //md-button.btn1(ng-click="close()") Search/Location
             md-button(ng-click="close()") Sign In/Register
             md-button(ng-click="close()") Sort/Filter
             md-button(ng-click="close()") Search/Location
@@ -36,8 +27,7 @@
             label.town Bridgewater, NJ
             md-icon location
             input(ng-model='user.city', type='text')
-            //md-button.md-raised.mid.left(ng-click="close()" ) Sign In
-            //md-button.md-raised.mid.left(ng-click="close()" ) Register
+
 
 
         md-input-container.md-icon-float.md-block(hide-xs)
