@@ -1,7 +1,7 @@
 doctype html
 html
     head
-        title= title
+        title= "Test"
         link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
         // bower:css
         link(rel='stylesheet', href='lib/angular-material/angular-material.css')
@@ -18,7 +18,7 @@ html
 
             #content(layout="row" layout-align="")
                 div(ui-view="sidenav")
-                div(ui-view="list")
+                div(ui-view="list" flex)
         // bower:js
         script(src='lib/angular/angular.js')
         script(src='lib/angular-ui-router/release/angular-ui-router.js')
@@ -31,6 +31,7 @@ html
         script(src="/js/main.js")
         script(src="/js/controllers/TestCtrl.js")
         script(src="/js/controllers/topNavCtrl.js")
+        script(src="/js/controllers/Ctrl.js")
 
 
 

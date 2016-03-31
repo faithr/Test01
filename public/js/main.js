@@ -13,7 +13,10 @@ angular
                         templateUrl: "/states/topnav"
                     },
                     "sidenav": {templateUrl: "/states/sidenav"},
-                    "list": {templateUrl: "/states/list"}
+                    "list": {
+                        templateUrl: "/states/list",
+                        controller:"Ctrl as ct"
+                    }
                 }
             });
     });

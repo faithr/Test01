@@ -1,59 +1,59 @@
 //   Created by froth on 3/6/2016.
-md-content
-    md-list
-    .md-list-item.md-list-item.wrapper
-        .one
-            md-icon.white-icon donut_small
-        .two
-            img(src="img/noun_122832_cc-test.svg")
-            h3.small Photography
-        .three
-            h3 The DMZ School of Photography in Warren
-
-        .four
-            h3.reg Warren, NJ
-
-        .five
-            h3.small-med 5.9 miles
-
-        .six
-            md-icon.color-icon home
-    md-divider
-    .md-list-item.wrapper
-        .one
-            md-icon.white-icon donut_small
-        .two
-            img(src="img/noun_122832_cc-test.svg")
-            h3.small Photography
-        .three
-            h3 The DMZ School of Photography in Warren
-
-        .four
-            h3.reg Warren, NJ
-
-        .five
-            h3.small-med  5.9 miles
-
-        .six
-            md-icon.color-icon home
-    md-divider
-    .md-list-item.wrapper
+md-content(flex)
+    .sk-list
+        .wrapper
             .one
                 md-icon.white-icon donut_small
             .two
                 img(src="img/noun_122832_cc-test.svg")
-                h3.small Photography
+                .small Photography
             .three
-                h3 The DMZ School of Photography in Warren
+                 The DMZ School of Photography in Warren
 
             .four
-                h3.reg Warren, NJ
+                .reg Warren, NJ
 
             .five
-                h3.small-med  5.9 miles
+                .small-med {{act.dist}} miles
 
             .six
                 md-icon.color-icon home
+        md-divider
+        .wrapper
+            .one
+                md-icon.white-icon donut_small
+            .two
+                img(src="img/noun_122832_cc-test.svg")
+                .small Photography
+            .three
+                 The DMZ School of Photography in Warren
+
+            .four
+                .reg Warren, NJ
+
+            .five
+                .small-med  5.9 miles
+
+            .six
+                md-icon.color-icon home
+        md-divider
+        .wrapper
+                .one
+                    md-icon.white-icon donut_small
+                .two
+                    img(src="img/noun_122832_cc-test.svg")
+                    .small Photography
+                .three
+                     The DMZ School of Photography in Warren
+
+                .four
+                    .reg Warren, NJ
+
+                .five
+                    .small-med  5.9 miles
+
+                .six
+                    md-icon.color-icon home
     //md-icon.lvl1 perm_identity
                 //md-icon.color1 home
                 //.secondary-padding
@@ -67,7 +67,7 @@ md-content
                 //.secondary-padding
                 //md-icon.color1 home
                 md-divider
-    //md-list-item(ng-repeat="it in tc.text" hide-gt-xs)
+    //(ng-repeat="it in tc.text" hide-gt-xs)
     //    md-icon.lvl1 perm_identity
     //    md-icon.color1 home
     //    .secondary-padding
