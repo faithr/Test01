@@ -4,7 +4,7 @@
         ng-controller="TopNavCtrl as tc")
     div.box1(layout="row")
         md-button.md-icon-button(ng-click="tc.toggleSidenav('left')", hide-gt-sm='', aria-label="Settings")
-            md-icon(aria-label='Menu', md-svg-icon='/img/Hamburger.svg' )
+            md-icon(aria-label='Menu', md-svg-icon='/img/Hamburger.svg')
         img(src="img/stretchkids-logo.jpg" alt="logo" height="72" width="300")
 
 
@@ -16,10 +16,10 @@
             md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") SORT
 
     .mid(layout='row')
-        section(hide-gt-sm='', flex='', layout='column')
-            md-button(ng-click="close()") Sign In/Register
-            md-button(ng-click="close()") Sort/Filter
-            md-button(ng-click="close()") Search/Location
+        section(hide-gt-sm='', flex='', layout='row' layout-align='center center')
+            md-button(ng-click="close()") Sign In
+            md-button(ng-click="close()") Sort
+            md-button(ng-click="close()") Filter
 
 
     aside.box3(flex)

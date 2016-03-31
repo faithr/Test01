@@ -10,27 +10,67 @@ function testCtrl() {
     vm.subtitle = "You gotta have Faith";
     vm.text = [
         {
+            "category": "Photography",
+            "name": "NJ School of Photography",
+            "address": "Somerville, NJ",
+            "miles": "7.4 miles"
+        }
+
+
+        , {
+            "category": "Photography",
+            "name": "Bridgewater Martial Artskjkjkj",
+            "address": "Somerville, NJ",
+            "miles": "7.4 miles"
+        }
+
+
+        , {
+            "category": "Photography",
+            "name": "NJ School of Photography",
+            "address": "Somerville, NJ",
+            "miles": "7.4 miles"
+        }
+
+
+        , {
+            "category": "Photography",
+            "name": "NJ School of Photography",
+            "address": "Somerville, NJ",
+            "miles": "7.4 miles"
+        }
+
+
+        , {
+            "category": "Photography",
+            "name": "NJ School of Photography",
+            "address": "Somerville, NJ",
+            "miles": "7.4 miles"
+        }
+
+        ,
+        {
             "category": "Tennis",
-            "title": "Green Knoll Tennis Center ",
+            "name": "gtrf",
             "address": "Bridgewater, NJ",
             "miles": ".5 miles"
         },
         {
-            "category": "Martial Arts",
-            "title": "Bridgewater Martial Arts ",
+            "category": "adfgfs jkljl;kjl;k",
+            "name": "Bridgewater Martial Arts ",
             "address": "Bridgewater, NJ",
             "miles": "1.2 miles"
         }
         ,
         {
             "category": "Voice",
-            "title": "School of Rock",
+            "name": "ghjskdfg jjglkjl;k jlkjlk",
             "address": "Somerville, NJ",
             "miles": "2.1 miles"
         }
         , {
             "category": "Photography",
-            "title": "NJ School of Photography",
+            "name": "NJ School of Photography",
             "address": "Somerville, NJ",
             "miles": "7.4 miles"
         }
@@ -38,21 +78,21 @@ function testCtrl() {
         ,
         {
             "category": "Martial Arts",
-            "title": "Bridgewater Martial Arts ",
+            "name": "Bridgewater Martial Arts ",
             "address": "Bridgewater, NJ",
             "miles": "1.2 miles"
         }
         ,
         {
             "category": "Voice",
-            "title": "School of Rock",
+            "name": "School of Rock",
             "address": "Somerville, NJ",
             "miles": "2.1 miles"
         }
         ,
         {
             "category": "Photography",
-            "title": "NJ School of Photography",
+            "name": "NJ School of Photography",
             "address": "Somerville, NJ",
             "miles": "7.4 miles"
         }
@@ -60,42 +100,42 @@ function testCtrl() {
         ,
         {
             "category": "Martial Arts",
-            "title": "Bridgewater Martial Arts ",
+            "name": "Bridgewater Martial Arts ",
             "address": "Bridgewater, NJ",
             "miles": "1.2 miles"
         }
         ,
         {
             "category": "Voice",
-            "title": "School of Rock",
+            "name": "School of Rock",
             "address": "Somerville, NJ",
             "miles": "2.1 miles"
         }
         ,
         {
             "category": "Photography",
-            "title": "NJ School of Photography",
+            "name": "NJ School of Photography",
             "address": "Somerville, NJ",
             "miles": "7.4 miles"
         },
 
         {
             "category": "Martial Arts",
-            "title": "Bridgewater Martial Arts ",
+            "name": "Bridgewater Martial Arts ",
             "address": "Bridgewater, NJ",
             "miles": "1.2 miles"
         }
         ,
         {
             "category": "Voice",
-            "title": "School of Rock",
+            "name": "School of Rock",
             "address": "Somerville, NJ",
             "miles": "2.1 miles"
         }
         ,
         {
             "category": "Photography",
-            "title": "NJ School of Photography",
+            "name": "NJ School of Photography",
             "address": "Somerville, NJ",
             "miles": "7.4 miles"
         }
