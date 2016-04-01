@@ -9,41 +9,57 @@ md-icon.color-icon {
   color: #2a74be;
 }
 
-h3 {
+.bold {
   font-size: 14px;
   line-height: 1.4rem;
   font-weight: 700;
 }
 
-h3.reg {
+.reg {
   font-size: 14px;
   line-height: 1.4rem;
   font-weight: 400;
 }
 
-h3.small {
-  font-size: 10px;
+.small {
+  font-size: 14px;
   line-height: 1.2rem;
   font-weight: 400;
 }
 
-h3.small-med {
+.small-med {
   font-size: 14px;
   line-height: 1.2rem;
   font-weight: 400;
 }
 
 .sk-list {
-  overflow-y: visible;
-  height: inherit;
+  //overflow-y: auto;
+  //overflow-x:hidden;
+  //display:flex;
+  //flex-direction: column;
+  //max-width: 1200px;
+  padding:20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: block;
+  position: relative;
+  max-width:900px;
+
+
+
+
 
   .wrapper {
     display: flex;
     flex-direction: row;
     //max-height: 300px;
     padding: 0 16px 0 16px;
-    width: 100%;
-    height: 88px;
+    width: inherit;
+    height: 72px;
+    > * {
+      padding: 0 2px 0 2px;
+    }
 
     .one {
       display: flex;
@@ -63,43 +79,53 @@ h3.small-med {
       min-width: 120px;
       max-width: 300px;
       padding: 0 5px 0 5px;
+      img {
+        width: 36px;
+      }
+      .small {
+        padding-left: 3px;
+      }
     }
 
     .three {
       display: flex;
-      flex: 1 3 250px;
+      flex: 1 3 350px;
       align-items: center;
       min-width: 200px;
-      max-width: 500px;
+      max-width: 700px;
       /*border: 2px solid green;*/
+      .bold {
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
 
     .four {
       display: flex;
-      flex: 1 2 200px;
+      flex: 1 2 250px;
       /*border: 2px solid green;*/
       align-items: center;
       min-width: 150px;
-      max-width: 300px;
+      max-width: 500px;
 
     }
 
     .five {
       display: flex;
-      flex: 2 1 150px;
+      flex: 2 1 100px;
       /*border: 2px solid green;*/
       align-items: center;
-      min-width: 100px;
+      min-width: 75px;
       max-width: 200px;
 
     }
 
     .six {
       display: flex;
-      flex: 2 1 100px;
+      flex: 0 0 36px;
       /*border: 2px solid green;*/
-      min-width: 60px;
-      max-width: 100px;
+      min-width: 36px;
+      max-width: 36px;
       align-items: center;
 
     }
