@@ -17,8 +17,8 @@ html
                 md-progress-circular(md-mode="indeterminate")
 
             md-content#content(flex layout="row" layout-align="")
-                div(ui-view="sidenav" flex layout="column")
-                div(ui-view="list" flex layout="column" )
+                div(ui-view="sidenav")
+                div(ui-view="list" )
         // bower:js
         script(src='lib/angular/angular.js')
         script(src='lib/angular-ui-router/release/angular-ui-router.js')
@@ -37,3 +37,12 @@ html
 
 
 
+//body(ng-app="MyApp" ng-cloak layout="column")
+//    div(ng-controller="TestCtrl as tc" layout="column"  flex)
+//        div(ui-view="topnav")
+//            h1 Loading...
+//            md-progress-circular(md-mode="indeterminate")
+//
+//        md-content#content(flex layout="row" layout-align="")
+//            div(ui-view="sidenav" flex layout="column")
+//            div(ui-view="list" flex layout="column" )
