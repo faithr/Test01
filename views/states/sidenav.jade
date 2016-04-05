@@ -1,35 +1,27 @@
+//Created by froth on 3/15/2016.
+
+md-sidenav.md-sidenav-left.md-whiteframe-17dp.left(md-component-id='left',
+    md-is-locked-open="$mdMedia('gt-sm')")
+    section(style="display:flex; flex-flow:row nowrap;justify-content:space-around; align-items:center")
+        md-button(style="flex: 0 0 45%; background:darken(white,30%);" ng-click="close()") Sign In
+        md-button(style="flex: 0 0 45%; background:darken(white,30%);" ng-click="close()") Register
 
 
 
-
-
-
-
-//   Created by froth on 3/15/2016.
-
-//section(layout='row', layout-xs='column',  hide-xs,  hide-gt-xs, show-gt-sm layout-align='center center', layout-wrap)
-//section(layout='row' layout-align='center center', layout-wrap)
-//    md-button.md-raised.left(ng-click="close()") Sign In
-//    md-button.md-raised.left(ng-click="close()") Register
-
-
-//md-sidenav.md-sidenav-left.md-whiteframe-17dp(layout="column",
-//md-component-id='left',
-//md-is-locked-open="$mdMedia('gt-sm')")
-//
-//    md-list
-//        md-list-item(ng-click="mc.close()", ui-sref="filter") Filter
-//        md-divider
-//        md-list-item(ng-click="mc.close()", ui-sref="list") List
-//        md-divider
-//        md-list-item(ng-click="mc.close()", ui-sref="map") Map
-//        md-divider
-//        md-list-item(ng-click="mc.close()", ui-sref="detail") Detail
-//        md-divider
-//        md-list-item(ng-click="mc.close()", ui-sref="home") Favorites
-//        md-divider
-//        md-list-item(ng-click="mc.close()", ui-sref="page3") Tell Us About
-//            | a New Activity
-//        md-divider
-//        md-list-item(ng-click="mc.close()",ui-sref="page3") Edit Your Profile
-//        md-divider
+    .left-inner
+        md-list
+            md-list-item(ng-click="mc.close()", ui-sref="filter") Filter
+            md-divider
+            md-list-item(ng-click="mc.close()", ui-sref="list") List
+            md-divider
+            md-list-item(ng-click="mc.close()", ui-sref="map") Map
+            md-divider
+            md-list-item(ng-click="mc.close()", ui-sref="detail") Detail
+            md-divider
+            md-list-item(ng-click="mc.close()", ui-sref="home") Favorites
+            md-divider
+            md-list-item(ng-click="mc.close()", ui-sref="page3") Tell Us About
+                | a New Activity
+            md-divider
+            md-list-item(ng-click="mc.close()",ui-sref="page3") Edit Your Profile
+            md-divider

@@ -10,15 +10,15 @@ html
 
         link(rel='stylesheet', href='/css/style.css')
 
-    body(ng-app="MyApp" ng-cloak layout="column")
-        div(ng-controller="TestCtrl as tc" layout="column"  flex)
-            div(ui-view="topnav")
+    body(ng-app="MyApp" ng-cloak )
+        .mainview(ng-controller="TestCtrl as tc")
+            .top(ui-view="topnav")
                 h1 Loading...
                 md-progress-circular(md-mode="indeterminate")
 
-            md-content#content(flex layout="row" layout-align="")
-                div(ui-view="sidenav")
-                div(ui-view="list" )
+            .bottom
+                .leftouter(ui-view="sidenav")
+                .rightouter(ui-view="list" )
         // bower:js
         script(src='lib/angular/angular.js')
         script(src='lib/angular-ui-router/release/angular-ui-router.js')
