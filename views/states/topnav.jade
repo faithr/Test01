@@ -1,22 +1,22 @@
 
 .row
     img(src="img/stretchkids-logo.jpg" alt="logo" height="72" width="300")
-.row
+.row2
     md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") FILTER
     md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") MAP
     md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") SORT
-.row
-    md-input-container.md-icon-float.md-block.padding(hide-xs)
-                label.town Bridgewater, NJ
-                md-icon location
-                input(ng-model='user.city', type='text')
+.row3
+    md-input-container.md-icon-float.md-block.padding
+        label.town Bridgewater, NJ
+        md-icon location
+        input(ng-model='user.city', type='text')
 
 
 
-        md-input-container.md-icon-float.md-block(hide-xs)
-            label Enter search keyword
-            md-icon search
-            input(ng-model='user.search', type='text')
+    md-input-container.md-icon-float.md-block
+        label Enter search keyword
+        md-icon search
+        input(ng-model='user.search', type='text')
 
 
 

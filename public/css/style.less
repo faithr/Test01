@@ -1,3 +1,30 @@
+.parent {
+  display: flex;
+}
+
+.parent-column {
+  .parent;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.parent-row {
+  .parent;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.row2{
+  margin-top: 20px;
+}
+
+.row3{
+  min-width: 300px;
+}
 .flexconfig(@min:100%;@max:100%;@basis:100%;@shrink:1;@grow:1){
   min-width:@min;
   max-width:@max;
@@ -13,12 +40,14 @@
   background:blue;
   background:darken(white, 20%);
 
+.md-button.test{
+    background-color: #ccc;
+  }
+
 }
 .right-content{
   background:green;
   background:darken(white, 10%);
-
-
 }
 .left-inner {
   //width:calc(100%-12px);
@@ -36,12 +65,8 @@
 }
 .left,
 .right{
-
-
   display:flex;
   flex-direction:column;
-
-
 }
 .right{
   overflow-y:auto;
@@ -132,13 +157,12 @@
 .left{
   width:calc(100%-7px);
   height:calc(80%-21px);
-
-  box-shadow: 37px 37px 10px grey;
+  //box-shadow: 37px 37px 10px grey;
   background:lighten(blue,25%);
   background:darken(white, 20%);
 }
 .leftouter{
-  width:40%;
+  width:30%;
   background: lightblue;
   display:flex;
   flex-direction:column;
@@ -163,6 +187,8 @@
   background:#555;
 }
 .top{
+  display: flex;
+  justify-content: space-between;
   height:170px;
   background:grey;
 }
@@ -182,7 +208,7 @@ body{
 }
 
 .mainview{
-  padding:16px;
+  //padding:16px;
   background: darken(white,0%);
 }
 .top{
@@ -207,7 +233,7 @@ body{
   background: darken(white,0%);
 }
 .left{
-  border: 2px solid darken(white, 30%);
+  //border: 2px solid darken(white, 30%);
   background: darken(white,0%);
 }
 .right-inner{
@@ -301,9 +327,13 @@ md-icon.color-icon {
   position: relative;
   max-width:900px;
 
+}
 
+.md-button{
+  background: white !important;
+}
 
-
-
-
+.md-button.test{
+  background: #f6f6f6 !important;
+  flex: 0 0 35%;
 }
