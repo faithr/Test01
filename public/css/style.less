@@ -163,24 +163,17 @@ img{
 .left{
   width:calc(100%-7px);
   height:calc(80%-21px);
-  //box-shadow: 37px 37px 10px grey;
-  background:lighten(blue,25%);
-  background:darken(white, 20%);
 }
+
 .leftouter{
   width:30%;
-  background: lightblue;
   display:flex;
   flex-direction:column;
   overflow:hidden;
   z-index:10;
-  background:darken(white, 10%);
-
-
 }
 .rightouter{
   width:60%;
-  background:lightgreen;
   display:flex;
   overflow:hidden;
 }
@@ -189,20 +182,15 @@ img{
   flex-direction:column;
   height: calc(100%);
   flex: 1 ;
-
-  background:#555;
 }
 .top{
   display: flex;
   justify-content: space-between;
   height:170px;
-  background:grey;
 }
 .bottom{
   flex:1;
   height:calc(100%);
-
-  background:yellow;
   display:flex;
 }
 
@@ -213,19 +201,14 @@ body{
   //padding:16px;
 }
 
-.mainview{
-  //padding:16px;
-  background: darken(white,0%);
+// Colors
+
+@colorOne: #fff;
+
+.mainview, .top, .bottom, .rightouter,.leftouter,.left,.right, {
+  background: @colorOne;
 }
-.top{
-  background: darken(white,0%);
-}
-.bottom{
-  background: darken(white,0%);
-}
-.rightouter{
-  background: darken(white,0%);
-}
+
 .leftouter{
   background: darken(white,0%);
 }
