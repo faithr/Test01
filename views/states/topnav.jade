@@ -1,6 +1,9 @@
 
 .row
+    md-icon(aria-label='Menu',md-svg-icon='/img/Hamburger.svg')
     img(src="img/stretchkids-logo.jpg" alt="logo" height="72" width="300")
+    md-button.md-icon-button(ng-click="tc.toggleSidenav('left')",hide-gt-sm='',aria-label="Settings")
+
 .row2
     md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") FILTER
     md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") MAP
