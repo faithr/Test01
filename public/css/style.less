@@ -8,6 +8,7 @@
   img {
     width: 80%;
     height: 80%;
+    max-width: 320px;
   }
 }
 
@@ -39,14 +40,6 @@
   overflow-y: auto;
 }
 
-//.spacer{
-//  height:35px;
-//  flex:0 0 35px;
-//}
-//.vspacer{
-//  width:35px;
-//  flex: 0 0 35px;
-//}
 .left,
 .right {
   display: flex;
@@ -97,17 +90,7 @@
       min-width: 100px;
       max-width: 700px;
     }
-    //.three {
-    //  display: flex;
-    //  flex: 1 3 350px;
-    //  align-items: center;
-    //  min-width: 100px;
-    //  max-width: 700px;
-    //  .bold {
-    //    font-size: 14px;
-    //    line-height: 16px;
-    //  }
-    //}
+
     //TOWN
     .four {
       display: flex;
@@ -116,14 +99,7 @@
       min-width: 75px;
       max-width: 500px;
     }
-    //    .four {
-    //      display: flex;
-    //      flex: 1 2 250px;
-    //      align-items: center;
-    //      min-width: 150px;
-    //      max-width: 500px;
-    //
-    //    }
+
     //MILES
     .five {
       display: flex;
@@ -152,7 +128,7 @@
 }
 
 .leftouter {
-  width:360px;
+  width: 360px;
   margin-left: 16px;
   display: flex;
   flex-direction: column;
@@ -201,11 +177,14 @@ body {
 }
 
 //Fonts
+.font-for-list(@size:14px; @weight:400; @height:1.5em) {
+  font-weight: @weight;
+  line-height: @height;
+  font-size: @size;
+}
 
 .bold {
-  font-size: 14px;
-  line-height: 1.4rem;
-  font-weight: 700;
+  .font-for-list(@weight:700);
 }
 
 .reg {
@@ -297,5 +276,5 @@ md-icon.color-icon {
   min-width: 40px;
   padding: 0 3px;
   font-size: 12px;
-  line-height:24px;
+  line-height: 24px;
 }
