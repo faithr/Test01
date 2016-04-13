@@ -9,33 +9,26 @@
 
 .flex-parent-column(@width:100%;@content: center;@justify: center; @items: center;@wrap:nowrap) {
   display: flex;
-  flex-flow: row @wrap;
+  flex-flow: column @wrap;
   align-items: @items;
   align-content: @content;
   //justify-content: @justify;
   width: @width;
 }
 
-.flex-child-row(@justify:center;@align:center;@shrink:1;@grow:1;@basis:100%;) {
+.flex-child-row(@min:100%; @max:100%;@grow:1; @shrink:1;@basis:100%;@align:center;) {
   display: flex;
-  justify: @justify;
-  flex-grow: @grow;
-  flex-shrink: @shrink;
-  flex-basis: @basis;
-  align-items: @align;
-  min-height: 20px;
-  max-height: 100%;
-}
+  flex: @grow @shrink @basis;
+  align-self: @align;
+  min-width: @min;
+  max-width: @max;}
 
-.flex-child-column(@justify:center;@align:center;@shrink:1;@grow:1;@basis:100%;) {
+.flex-child-column(@min:100%; @max:100%;@grow:1; @shrink:1;@basis:100%;@align:center;) {
   display: flex;
-  justify: @justify;
-  flex-grow: @grow;
-  flex-shrink: @shrink;
-  flex-basis: @basis;
-  align-items: @align;
-  min-width: 100%;
-  max-width: 100%;
+  flex: @grow @shrink @basis;
+  align-self: @align;
+  min-width: @min;
+  max-width: @max;
 }
 
 .font-for-list(@size:14px; @weight:400; @height:1.5em) {
