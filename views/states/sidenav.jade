@@ -1,8 +1,8 @@
 md-sidenav.md-sidenav-left.md-whiteframe-17dp.sidenavparent(md-component-id='left',
 md-is-locked-open="$mdMedia('gt-sm')")
     .left-side-nav-buttons
-        md-button.test(ng-click="close()") Sign In
-        md-button.test(ng-click="close()") Register
+        md-button.md-raised(ng-click="close()") Sign In
+        md-button.md-raised(ng-click="close()") Register
 
     md-list.left-inner
         md-list-item(ng-click="mc.close()", ui-sref="filter") Filter
