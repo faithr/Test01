@@ -9,16 +9,27 @@
     .flex-parent-column();
     .icon {
       .flex-child-row;
-      height: 88px;
+      height: 72px;
       background-color: #2a74be;
       max-width: 25px;
     }
   ;
+    .right-inner {
+      //width:calc(100%-12px);
+      width: calc(80% - 3px);
+      overflow-y: auto;
+    }
+    ;
     .cat {
       .flex-child-row();
       min-width: 120px;
       max-width: 140px;
       margin-left: 5px;
+    }
+    .right-inner {
+      //width:calc(100%-12px);
+      width: calc(100% - 3px);
+      overflow-y: auto;
     }
   ;
     .name {
@@ -67,5 +78,13 @@
     }
   ;
   }
+  // Icons
 
+  md-icon.white-icon {
+    color: white;
+  }
+
+  md-icon.color-icon {
+    color: #2a74be;
+  }
 }
