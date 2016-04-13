@@ -1,0 +1,21 @@
+@import (less) "mixins.less";
+@import (less) "variables.less";
+
+.left-side-nav-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-inner {
+  //width:calc(100%-12px);
+  width: calc(100% - 3px);
+  overflow-y: auto;
+}
+

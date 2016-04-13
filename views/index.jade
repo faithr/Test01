@@ -8,7 +8,7 @@ html
         link(rel='stylesheet', href='lib/material-design-lite/material.min.css')
         // endbower
 
-        link(rel='stylesheet', href='/css/style.css')
+        link(rel='stylesheet', href='/css/main.css')
 
     body(ng-app="MyApp" ng-cloak )
         .mainview(ng-controller="TestCtrl as tc")
@@ -17,8 +17,8 @@ html
                 md-progress-circular(md-mode="indeterminate")
 
             .bottom
-                .leftouter(ui-view="sidenav")
-                .rightouter(ui-view="list")
+                #leftouter(ui-view="sidenav")
+                #listdesktop(ui-view="list")
         // bower:js
         script(src='lib/angular/angular.js')
         script(src='lib/angular-ui-router/release/angular-ui-router.js')

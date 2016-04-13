@@ -1,0 +1,71 @@
+@import (less) "mixins.less";
+@import (less) "variables.less";
+
+#listdesktop {
+  width: 80%;
+  .row-wrapper {
+    margin-bottom: 2px;
+    margin-top: 2px;
+    .flex-parent-column();
+    .icon {
+      .flex-child-row;
+      height: 88px;
+      background-color: #2a74be;
+      max-width: 25px;
+    }
+  ;
+    .cat {
+      .flex-child-row();
+      min-width: 120px;
+      max-width: 140px;
+      margin-left: 5px;
+    }
+  ;
+    .name {
+      .flex-child-row(@basis:100%;);
+      min-width: 160px;
+      max-width: 400px;
+    }
+  ;
+    .town {
+      .flex-child-row();
+      min-width: 75px;
+      max-width: 200px;
+    }
+  ;
+
+    .miles {
+      .flex-child-row();
+      min-width: 75px;
+      max-width: 200px;
+    }
+  ;
+
+    .home {
+      .flex-child-row();
+      min-width: 36px;
+      max-width: 36px;
+    }
+  ;
+    .bold {
+      .font-for-list(@weight:700);
+    }
+  ;
+
+    .reg {
+      .font-for-list();
+    }
+  ;
+
+    .small {
+      .font-for-list(@size:12px;);
+    }
+  ;
+
+    .small-med {
+      .font-for-list();
+    }
+  ;
+  }
+
+}
