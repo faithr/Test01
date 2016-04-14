@@ -15,7 +15,7 @@ angular
                     "sidenav": {templateUrl: "/states/sidenav"},
                     "list": {
                         templateUrl: "/states/list",
-                        controller:"Ctrl as ct"
+                        controller:"ListCtrl as lc"
                     }
                 }
             });

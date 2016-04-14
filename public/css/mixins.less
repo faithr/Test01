@@ -1,4 +1,4 @@
-.flex-parent-row(@height:100%;@content: center;@justify: center; @items: center;@wrap:nowrap) {
+.flex-parent-row(@height:inherit;@content: center;@justify: center; @items: stretch;@wrap:nowrap) {
   display: flex;
   flex-flow: row @wrap;
   align-items: @items;
@@ -7,28 +7,29 @@
   height: @height;
 }
 
-.flex-parent-column(@width:100%;@content: center;@justify: center; @items: center;@wrap:nowrap) {
+.flex-parent-column(@width:inherit;@content: center;@justify: flex-start; @items: stretch;@wrap:nowrap) {
   display: flex;
   flex-flow: column @wrap;
   align-items: @items;
   align-content: @content;
-  //justify-content: @justify;
+  justify-content: @justify;
   width: @width;
 }
 
-.flex-child-row(@min:100%; @max:100%;@grow:1; @shrink:1;@basis:100%;@align:center;) {
-  display: flex;
-  flex: @grow @shrink @basis;
-  align-self: @align;
-  min-width: @min;
-  max-width: @max;}
-
-.flex-child-column(@min:100%; @max:100%;@grow:1; @shrink:1;@basis:100%;@align:center;) {
+.flex-child-row(@min:0%; @max:100%;@grow:1; @shrink:1;@basis:50%;@align:auto) {
   display: flex;
   flex: @grow @shrink @basis;
   align-self: @align;
   min-width: @min;
   max-width: @max;
+}
+
+.flex-child-column(@min:0%; @max:100%;@grow:1; @shrink:1;@basis:50%;@align:auto) {
+  display: flex;
+  flex: @grow @shrink @basis;
+  align-self: @align;
+  min-height: @min;
+  max-height: @max;
 }
 
 .font-for-list(@size:14px; @weight:400; @height:1.5em) {

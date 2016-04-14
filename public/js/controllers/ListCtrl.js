@@ -2,8 +2,9 @@
  * Created by David Ziegelheim on 3/15/2016.
  */
 angular.module("MyApp")
-    .controller("Ctrl", function () {  //FaithFactory
+    .controller("ListCtrl", function ($mdMedia) {  //FaithFactory
         var vm = this;
+        vm.mdMedia = $mdMedia;
         //vm.activities = FaithFactory.shortact;
         //vm.cat1 = function (cats) {
         //    return FaithFactory.parseCat(0, cats);
