@@ -1,25 +1,27 @@
 #topnav01
-    .row
-        md-icon(aria-label='Menu',md-svg-icon='/img/Hamburger.svg')
-        img(src="img/stretchkids-logo.jpg" alt="logo" height="72" width="300")
+    .logo
         md-button.md-icon-button(ng-click="tc.toggleSidenav('left')",hide-gt-sm='',aria-label="Settings")
+            md-icon(aria-label='Menu',md-svg-icon='/img/Hamburger.svg')
 
-    .row2
-        md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") FILTER
-        md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") MAP
-        md-button.md-raised.mid(ng-click="$mdOpenMenu($event)") SORT
-    .row3
-        md-input-container.md-icon-float.md-block.padding
+        img(src="img/stretchkids-logo.jpg" alt="logo")
+
+
+    .buttons
+        md-button.md-raised(ng-click="$mdOpenMenu($event)") FILTER
+        md-button.md-raised(ng-click="$mdOpenMenu($event)") MAP
+        md-button.md-raised(ng-click="$mdOpenMenu($event)") SORT
+    .inputs
+        md-input-container
             label.town Bridgewater, NJ
             md-icon location
             input(ng-model='user.city', type='text')
 
 
 
-        md-input-container.md-icon-float.md-block
-            label Enter search keyword
-            md-icon search
-            input(ng-model='user.search', type='text')
+        //md-input-container
+        //    label Enter search keyword
+        //    md-icon search
+        //    input(ng-model='user.search', type='text')
 
 
 

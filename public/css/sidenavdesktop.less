@@ -2,19 +2,30 @@
 @import (less) "variables.less";
 
 .sidenavparent {
-  display: flex;
-  flex-direction: column;
-}
+  //display: flex;
+  //flex-direction: column;
+  .flex-child-row(320px, 320px, 0, 0, 320px);
+  // @height:100%
+  //background:lighten(green, 60%);
+  .flex-parent-column(@justify:stretch);
+  margin: 0 25px 25px 0;
 
+  #sidenavcontents{
+
+    .flex-parent-column(@justify: stretch, @width:300px)
+  }
   .left-side-nav-buttons {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+    .flex-child-column(30px, 30px, 0, 0, 30px);
+    .flex-parent-row(@justify: space-around);
+
     padding: 5px;
   }
 
   .left-inner {
     //width:calc(100%-12px);
+    .flex-parent-column(@items:stretch);
+    .flex-child-column();
     width: calc(100% - 3px);
     overflow-y: auto;
   }
+}

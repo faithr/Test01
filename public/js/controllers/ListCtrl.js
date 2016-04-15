@@ -5,7 +5,21 @@ angular.module("MyApp")
     .controller("ListCtrl", function ($mdMedia) {  //FaithFactory
         var vm = this;
         vm.mdMedia = $mdMedia;
-        //vm.activities = FaithFactory.shortact;
+
+        vm.isDesktop=function(){
+            return $mdMedia('(min-width: 960px)');
+        }
+
+        vm.isTablet=function(){
+            return $mdMedia('	(min-width: 600px) and (max-width: 959px)');
+        }
+
+        vm.isPhone=function(){
+            return $mdMedia('(max-width: 599px)');
+        }
+        //vm.act
+        //
+        // ivities = FaithFactory.shortact;
         //vm.cat1 = function (cats) {
         //    return FaithFactory.parseCat(0, cats);
         //};

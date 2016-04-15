@@ -2,25 +2,46 @@
 @import (less) "variables.less";
 
 #topnav01 {
-  .flex-parent-row();
-  .row {
-    margin-left: 16px;
-    img {
-      width: 80%;
-      height: 80%;
-      max-width: 320px;
+  .flex-child-row();
+  .flex-parent-row(@height:170px, @justify:space-between);
+  padding: 10px;
+
+  .logo {
+    .flex-child-row(150px,400px);
+    .flex-parent-row(@justify:flex-start, @items:center);
+    md-button{
+      padding:10px;
+      .flex-child-row(100px,100px,1,1,100px);
+      md-icon{
+
+      }
     }
+    img{
+      max-height:90%;
+    }
+
+    //margin-left: 16px;
+    //img {
+    //  width: 80%;
+    //  height: 80%;
+    //  max-width: 320px;A
+    //}
   }
 
-  .row2 {
-    margin-top: 20px;
-    min-width: 300px;
+  .buttons {
+    .flex-parent-row(@items:center);
+    //margin-top: 20px;
+    //min-width: 500px;
 
   }
 
-  .row3 {
-    min-width: 300px;
-    margin-right: 40px;
+  .inputs {
+    .flex-child-row(300px,600px,1,1,450px);
+    .flex-parent-column(@width:100%, @justify: space-around, @items:stretch);
+    padding: 10px 20px;
+
+    //min-width: 300px;
+    //margin-right: 40px;
   }
 
   //Buttons
