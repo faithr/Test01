@@ -1,0 +1,72 @@
+@import (less) "mixins.less";
+@import (less) "variables.less";
+
+#listtablet {
+  .wrapper {
+    .flex-parent-column();
+    background: #fff;
+    > div {
+      border: 2px solid green;
+    }
+    > * > div {
+      border: 1px solid blue;
+    }
+
+    .wrappersub1 {
+      .flex-parent-row(@height:56px);
+      .flex-child-column();
+      .one {
+        .flex-parent-column(@justify:center;@items:center);;
+        .flex-child-row(30px, 30px, 0, 0, 30px);
+        Background:@colorTwo;
+
+        order: 1;
+      }
+
+      .two {
+        .flex-parent-column(@justify:center;@items:center);
+        .flex-child-row(30px, 100%, 1, 1, 75px);
+
+        order: 2;
+      }
+    }
+
+    .three {
+      .flex-parent-column(@justify:center;@items:center);;
+      .flex-child-column(56px, 56px, 0, 0, 56px;);
+      // .flexChild(75px, 100%, 100px, 1,1);
+
+      order: 3;
+    }
+
+    .four {
+      .flex-parent-column(@justify:center;@items:center);;
+      .flex-child-column(56px, 56px, 0, 0, 56px;);
+      // .flexChild(75px, 200px, 100px, 1,1);
+
+      order: 4;
+
+    }
+    .wrappersub3 {
+      .flex-parent-row(@height:56px);
+      .flex-child-column();
+      order: 7;
+
+      .five {
+        .flex-parent-row(@justify:center;@items:center);;
+        .flex-child-row();
+
+        order: 5;
+      }
+      .six {
+        .flex-parent-row(@justify:center;@items:center);;
+        .flex-child-row();
+
+        order: 6;
+      }
+
+    }
+  }
+
+}
+
