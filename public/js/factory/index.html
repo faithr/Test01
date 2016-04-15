@@ -1,0 +1,14 @@
+<html>
+<head>
+</head>
+
+<body ng-app="MyApp" ng-controller="ListCtrl as ct">
+<h3>This is a sprite test</h3>
+<div ng-repeat="act in ct.activities">
+     {{ct.cat1(act.category)}} {{ct.cat2(act.category)}}  {{act.name}} {{act.city}},NJ {{ct.cat3(act.category)}} {{ct.getDist(act.id)}}
+</div>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="../factories/FaithFactory.js"></script>
+<script src="../controllers/Ctrl.js"></script>
+</body>
+</html>
