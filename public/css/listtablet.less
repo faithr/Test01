@@ -2,67 +2,41 @@
 @import (less) "variables.less";
 
 #listtablet {
-  .flex-parent-row(@height:inherit;@content: center;@justify: center; @items: stretch;@wrap:nowrap) {
-    display: flex;
-    flex-flow: row @wrap;
-    align-items: @items;
-    align-content: @content;
-    justify-content: @justify;
-    height: @height;
-  }
-
-  .flex-parent-column(@width:inherit;@content: center;@justify: flex-start; @items: stretch;@wrap:nowrap) {
-    display: flex;
-    flex-flow: column @wrap;
-    align-items: @items;
-    align-content: @content;
-    justify-content: @justify;
-    width: @width;
-  }
-
-  .flex-child-row(@min:0%; @max:100%;@grow:1; @shrink:1;@basis:50%;@align:auto) {
-    display: flex;
-    flex: @grow @shrink @basis;
-    align-self: @align;
-    min-width: @min;
-    max-width: @max;
-  }
-
-  .flex-child-column(@min:0%; @max:100%;@grow:1; @shrink:1;@basis:50%;@align:auto) {
-    display: flex;
-    flex: @grow @shrink @basis;
-    align-self: @align;
-    min-height: @min;
-    max-height: @max;
-  }
 
   //div{border:green solid 1px}
   .wrapper {
     .flex-parent-row(@height:112px, @justify:stretch, @items:stretch);
-    > div {
-      border: 2px solid #ccc;
-    }
-    > * > div {
-      border: 1px solid #ccc;
-    }
+    //> div {
+    //  border: 2px solid #ccc;
+    //}
+    //> * > div {
+    //  border: 1px solid #ccc;
+    //}
     .one {
       .flex-parent-column(@justify:center,@items:center);
       .flex-child-row(30px, 30px, 0, 0, 30px);
       background: #2a74be;
       color: white;
+      margin: 4px 0;
+      padding:30px 0 60px 0;
 
     }
     .two {
       .flex-parent-column(@justify:stretch,@items:stretch);
       .flex-child-row(75px, 150px, 1, 1, 125px);
       .a1 {
-        .flex-child-column(0%, 100%, 1, 1, 50%);
+        .flex-child-column(0%, 50%, 1, 1, 50%);
         .flex-parent-row(@justify:center, @items:center);
+        img{
+          height:80px;
+        }
+
 
       }
       .a2 {
         .flex-child-column(0%, 100%, 1, 1, 50%);
         .flex-parent-row(@justify:center, @items:center);
+        md-body-2{ text-align: center}
 
       }
 
@@ -73,15 +47,18 @@
 
       .three {
         .flex-child-column(0%, 100%, 1, 1, 50%);
-        .flex-parent-row(@justify:center, @items:center);
+        .flex-parent-row(@justify:center, @items:flex-end);
         // .flexChild(75px, 100%, 100px, 1,1);
+        text-align: center;
+        padding:0 0 3px 0;
 
       }
 
       .four {
         .flex-child-column(0%, 100%, 1, 1, 50%);
-        .flex-parent-row(@justify:center, @items:center);
+        .flex-parent-row(@justify:center, @items:flex-start);
         // .flexChild(75px, 200px, 100px, 1,1);
+        padding: 3px 0 0 0;
 
       }
     }
@@ -91,24 +68,20 @@
 
       .five {
         .flex-child-column(0%, 100%, 1, 1, 50%);
-        .flex-parent-row(@justify:center, @items:center);
+        .flex-parent-row(@justify:center, @items:flex-end);
         // .flexChild(75px, 100%, 100px, 1,1);
 
       }
 
       .six {
         .flex-child-column(0%, 100%, 1, 1, 50%);
-        .flex-parent-row(@justify:center, @items:center);
+        .flex-parent-row(@justify:center, @items:flex-start);
         // .flexChild(75px, 200px, 100px, 1,1);
 
       }
     }
 
   }
-  body {
-    .flex-parent-column();
-    overflow-y: auto;
 
-  }
 }
 
