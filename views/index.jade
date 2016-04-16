@@ -5,12 +5,13 @@ html
         link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
         // bower:css
         link(rel='stylesheet', href='lib/angular-material/angular-material.css')
-        link(rel='stylesheet', href='lib/material-design-lite/material.min.css')
+
         // endbower
 
         link(rel='stylesheet', href='/css/main.css')
 
     body(ng-app="MyApp" ng-cloak )
+        .padding
         .mainview(ng-controller="TestCtrl as tc")
             .top(ui-view="topnav")
                 h1 Loading...
@@ -21,6 +22,7 @@ html
                 md-is-locked-open="$mdMedia('gt-sm')")
                     #leftouter(ui-view="sidenav")
                 #rightouter(ui-view="list")
+        .padding
         // bower:js
         script(src='lib/angular/angular.js')
         script(src='lib/angular-ui-router/release/angular-ui-router.js')
@@ -28,7 +30,7 @@ html
         script(src='lib/angular-aria/angular-aria.js')
         script(src='lib/angular-messages/angular-messages.js')
         script(src='lib/angular-material/angular-material.js')
-        script(src='lib/material-design-lite/material.min.js')
+
         // endbower
         script(src="/js/main.js")
         script(src="/js/controllers/TestCtrl.js")
