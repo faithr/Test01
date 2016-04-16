@@ -12,13 +12,18 @@
     md-button{
       padding:10px;
       .flex-child-row(100px,100px,1,1,100px);
+      .flex-parent-row();
       md-icon{
 
       }
     }
-    img{
-      max-height:90%;
+
+    img {
+      .flex-child-row(@max:100%);
+      //max-width: 100%;
+      //height: auto;
     }
+
 
     //margin-left: 16px;
     //img {
@@ -29,16 +34,20 @@
   }
 
   .buttons {
-    .flex-parent-row(@items:center);
+    .flex-parent-row(@items:center,@wrap:wrap,@justify:center);
     //margin-top: 20px;
     //min-width: 500px;
+    padding:20px;
 
   }
 
   .inputs {
     .flex-child-row(300px,600px,1,1,450px);
-    .flex-parent-column(@width:100%, @justify: space-around, @items:stretch);
-    padding: 10px 20px;
+    .flex-parent-column(@width:100%, @justify: space-around, @items:flex-start);
+    md-input-container, input{
+      width:100%;
+    }
+    padding: 20px;
 
     //min-width: 300px;
     //margin-right: 40px;
