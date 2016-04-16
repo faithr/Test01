@@ -2,71 +2,113 @@
 @import (less) "variables.less";
 
 #listtablet {
-  .wrapper {
-    .flex-parent-column();
-    background: #fff;
-    > div {
-      border: 2px solid green;
-    }
-    > * > div {
-      border: 1px solid blue;
-    }
-
-    .wrappersub1 {
-      .flex-parent-row(@height:56px);
-      .flex-child-column();
-      .one {
-        .flex-parent-column(@justify:center;@items:center);;
-        .flex-child-row(30px, 30px, 0, 0, 30px);
-        Background:@colorTwo;
-
-        order: 1;
-      }
-
-      .two {
-        .flex-parent-column(@justify:center;@items:center);
-        .flex-child-row(30px, 100%, 1, 1, 75px);
-
-        order: 2;
-      }
-    }
-
-    .three {
-      .flex-parent-column(@justify:center;@items:center);;
-      .flex-child-column(56px, 56px, 0, 0, 56px;);
-      // .flexChild(75px, 100%, 100px, 1,1);
-
-      order: 3;
-    }
-
-    .four {
-      .flex-parent-column(@justify:center;@items:center);;
-      .flex-child-column(56px, 56px, 0, 0, 56px;);
-      // .flexChild(75px, 200px, 100px, 1,1);
-
-      order: 4;
-
-    }
-    .wrappersub3 {
-      .flex-parent-row(@height:56px);
-      .flex-child-column();
-      order: 7;
-
-      .five {
-        .flex-parent-row(@justify:center;@items:center);;
-        .flex-child-row();
-
-        order: 5;
-      }
-      .six {
-        .flex-parent-row(@justify:center;@items:center);;
-        .flex-child-row();
-
-        order: 6;
-      }
-
-    }
+  .flex-parent-row(@height:inherit;@content: center;@justify: center; @items: stretch;@wrap:nowrap) {
+    display: flex;
+    flex-flow: row @wrap;
+    align-items: @items;
+    align-content: @content;
+    justify-content: @justify;
+    height: @height;
   }
 
+  .flex-parent-column(@width:inherit;@content: center;@justify: flex-start; @items: stretch;@wrap:nowrap) {
+    display: flex;
+    flex-flow: column @wrap;
+    align-items: @items;
+    align-content: @content;
+    justify-content: @justify;
+    width: @width;
+  }
+
+  .flex-child-row(@min:0%; @max:100%;@grow:1; @shrink:1;@basis:50%;@align:auto) {
+    display: flex;
+    flex: @grow @shrink @basis;
+    align-self: @align;
+    min-width: @min;
+    max-width: @max;
+  }
+
+  .flex-child-column(@min:0%; @max:100%;@grow:1; @shrink:1;@basis:50%;@align:auto) {
+    display: flex;
+    flex: @grow @shrink @basis;
+    align-self: @align;
+    min-height: @min;
+    max-height: @max;
+  }
+
+  //div{border:green solid 1px}
+  .wrapper {
+    .flex-parent-row(@height:112px, @justify:stretch, @items:stretch);
+    > div {
+      border: 2px solid #ccc;
+    }
+    > * > div {
+      border: 1px solid #ccc;
+    }
+    .one {
+      .flex-parent-column(@justify:center,@items:center);
+      .flex-child-row(30px, 30px, 0, 0, 30px);
+      background: #2a74be;
+      color: white;
+
+    }
+    .two {
+      .flex-parent-column(@justify:stretch,@items:stretch);
+      .flex-child-row(75px, 150px, 1, 1, 125px);
+      .a1 {
+        .flex-child-column(0%, 100%, 1, 1, 50%);
+        .flex-parent-row(@justify:center, @items:center);
+
+      }
+      .a2 {
+        .flex-child-column(0%, 100%, 1, 1, 50%);
+        .flex-parent-row(@justify:center, @items:center);
+
+      }
+
+    }
+    .wrappersub1 {
+      .flex-parent-column(@justify:stretch,@items:stretch);
+      .flex-child-row(150px, 325px, 1, 1, 250px);
+
+      .three {
+        .flex-child-column(0%, 100%, 1, 1, 50%);
+        .flex-parent-row(@justify:center, @items:center);
+        // .flexChild(75px, 100%, 100px, 1,1);
+
+      }
+
+      .four {
+        .flex-child-column(0%, 100%, 1, 1, 50%);
+        .flex-parent-row(@justify:center, @items:center);
+        // .flexChild(75px, 200px, 100px, 1,1);
+
+      }
+    }
+    .wrappersub3 {
+      .flex-parent-column(@justify:stretch,@items:stretch);
+      .flex-child-row(150px, 325px, 1, 1, 250px);
+
+      .five {
+        .flex-child-column(0%, 100%, 1, 1, 50%);
+        .flex-parent-row(@justify:center, @items:center);
+        // .flexChild(75px, 100%, 100px, 1,1);
+
+      }
+
+      .six {
+        .flex-child-column(0%, 100%, 1, 1, 50%);
+        .flex-parent-row(@justify:center, @items:center);
+        // .flexChild(75px, 200px, 100px, 1,1);
+
+      }
+    }
+
+  }
+  body {
+    .flex-parent-column();
+    overflow-y: auto;
+
+  }
 }
 
